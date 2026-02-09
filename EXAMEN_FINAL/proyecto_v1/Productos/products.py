@@ -3,7 +3,7 @@ from config.config import ConfigBd
 
 console = Console()
 config = ConfigBd()
-path="C:\\Users\\FENIX\\Documents\\CODE_VISUAL\\DATUX_Temp\\EXAMEN_FINAL\\proyecto_v1\\Productos\\reporte.txt"
+path="reporte.txt"
 
 def mostrarGraficas():
     conn = config.bd
