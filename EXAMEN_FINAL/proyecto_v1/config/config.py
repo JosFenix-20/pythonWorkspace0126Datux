@@ -1,4 +1,5 @@
 import sqlite3
+import os
 class ConfigBd():
 
     def __init__(self):
@@ -7,7 +8,10 @@ class ConfigBd():
         self.bd=self.createBd()
         self.populate() # seed
     def createBd(self):
-        conn = sqlite3.connect("C:\\Users\\FENIX\\Documents\\CODE_VISUAL\\DATUX_Temp\\EXAMEN_FINAL\\proyecto_v1\\bd-si.db")
+        current_dir = os.path.dirname(os.path.abspath(__file__))
+        db_path = os.path.join(current_dir, "..", "bd-si.db")
+        db_path = os.path.abspath(db_path)
+        conn = sqlite3.connect(db_path)
         return conn
     def discontecBd(self):
         if self.bd:
